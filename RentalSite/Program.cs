@@ -1,11 +1,15 @@
+using System.Collections.ObjectModel;
+using System.Text;
+using System.Text.RegularExpressions;
 using RentalSite.Components;
+using RentalSite.Components.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
+builder.Services.AddSingleton<AppDbContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,3 +29,4 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
+

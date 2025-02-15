@@ -1,20 +1,36 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    @* <div class="sidebar"> *@
+    @*     <NavMenu /> *@
+    @* </div> *@
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        <div class="top-row" style="background-color: rgba(72, 72, 72, 0.3); backdrop-filter:blur(10px); height:80px;  display: flex; justify-content: space-between; margin-left:-25px; margin-left:-70px!important">
+
+            <div class="nav-item" >
+            <a style="" href="\ "><img class="small-logo" style="object-fit: contain; " src="Images/pies.jpg" /></a>
+                <a style="object-fit: cover;" href="\ "><img class="big-logo" style="object-fit: contain; " src="Images/tescik1.svg" /></a>
+            </div>
+            
+           
+            <div class="nav-item" style="" >
+                <a href="\rentPL" style="padding: 22px; border: 2px solid black; border-radius:100px; background-color: rgba(72, 72, 72, 0.6); color:ivory">Wynajem</a>
+                <a href="\fun" style="padding: 22px; border: 2px solid black; border-radius:100px; background-color: rgba(72, 72, 72, 0.6); color:ivory">Fun</a>
+                <a href="\galleryPL" style="padding: 22px; border: 2px solid black; border-radius:100px; background-color: rgba(72, 72, 72, 0.6); color:ivory">Galeria</a>
+                <a href="\DBTest" style="padding: 22px; border: 2px solid black; border-radius:100px; background-color: rgba(72, 72, 72, 0.6); color:ivory">DBTest</a>
+            </div>
+            
         </div>
 
-        <article class="content px-4">
+        <article class="content">
             @Body
         </article>
     </main>
+
+
 </div>
+
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.

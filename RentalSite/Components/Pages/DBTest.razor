@@ -1,0 +1,117 @@
+﻿@page "/DBTest"
+
+@rendermode InteractiveServer
+
+@inject Data.AppDbContext dbContext
+
+<PageTitle>DBTest</PageTitle>
+
+<EditForm Model="@newPerson" OnValidSubmit="SubmitForm" id="EditForm">
+    <DataAnnotationsValidator />
+
+
+    <div class="form-group">
+        <label for="fname">First name:</label><br>
+        <InputText id="fname" @bind-Value="newPerson.Name" />
+        <ValidationMessage For="@(()=> newPerson.Name)" />
+    </div>
+    
+    
+    <br />
+
+    <div class="form-group">
+        <label for="lname">Last name:</label><br>
+        <InputText id="lname" @bind-Value="newPerson.Lastname" />
+        <ValidationMessage For="@(()=> newPerson.Lastname)" />
+    </div>
+
+
+
+    
+    
+    <br /><br />
+
+  
+    <div class="btn-block">
+        <button type="submit" class="button btn btn-primary " style="background:#cc0052 ">Submit</button>
+    </div>
+
+
+
+
+    
+</EditForm>
+
+@if (saved)
+{
+    <p style="font-size: 100px">Guest added</p>
+}
+@if (error)
+{
+    <p style="font-size: 100px; color: red;">Something went wrong</p>
+}
+
+@code {
+    
+    private Person newPerson = new Person();
+    private bool saved = false;
+    private bool error = false;
+
+    private async Task SubmitForm()
+    {
+        saved = false;
+        error = false;
+
+        try
+        {
+            
+            dbContext.Guests.Add(newPerson);
+            await dbContext.SaveChangesAsync();
+            newPerson = new Person();
+            saved = true;
+            StateHasChanged();
+        }
+        catch (Exception)
+        {
+            
+            error = true;
+        }
+
+        
+        
+    }
+
+   
+    
+
+}
+<style>
+    #EditForm{
+        width: 100%;
+        padding: 20px;
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 0 10px 0 #cc0052;
+    }
+
+    .btn-block {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    btn {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #cc0052;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+        btn:hover {
+            /* background: #ff0066; */
+            background: #ff2211;
+        }
+</style>

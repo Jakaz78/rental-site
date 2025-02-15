@@ -11,10 +11,12 @@ main {
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
-
+.big-logo, .small-logo {
+    display: none;
+}
 .top-row {
     background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
@@ -35,6 +37,21 @@ main {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+@media (min-width: 900px) {
+    .big-logo {
+        height: 80px;
+        object-fit: contain;
+        display: block;
+    }
+}
+@media (max-width:899px){
+    .small-logo {
+            height: 80px;
+            object-fit: contain;
+            display: block;
+        }
+    }
+
 
 @media (max-width: 640.98px) {
     .top-row {
@@ -44,6 +61,7 @@ main {
     .top-row ::deep a, .top-row ::deep .btn-link {
         margin-left: 0;
     }
+    
 }
 
 @media (min-width: 641px) {
@@ -71,9 +89,10 @@ main {
     }
 
     .top-row, article {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
+        padding-left: 2rem; 
+        padding-right: 1.5rem; 
     }
+    
 }
 
 #blazor-error-ui {
@@ -94,3 +113,9 @@ main {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.nav-item {
+    display: flex;
+    align-items: center; /* Wycentrowanie elementów w pionie w nav-item */
+    justify-content:start
+}
