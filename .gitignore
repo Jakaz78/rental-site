@@ -132,3 +132,6 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+
+# Ignoruj plik appsettings.json
+appsettings.json

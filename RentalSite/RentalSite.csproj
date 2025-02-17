@@ -4,6 +4,7 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>c30c8825-a953-4450-b3ff-62d6c579b795</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -22,6 +23,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Blazorise.Captcha" Version="1.7.4" />
+	  <PackageReference Include="Blazorise.Captcha.ReCaptcha" Version="1.7.4" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.2" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.2">

@@ -2,7 +2,7 @@
 
 @rendermode InteractiveServer
 
-<body>
+<body class="gallery-page">
 
     <div style=" transition: opacity 0.9s ease-in-out; width: 100%; position:absolute; display:flex;  justify-content:space-between;  left:0px; top:50%">
 
@@ -23,14 +23,14 @@
 
     </div>
 
-    <div @onmouseover="ShowButtons" @onmouseout="HideButtons" class="fullscreen-container" style="margin-left:-2rem!important; display: block; margin-left: -13px; margin-top: -16px; width: 26px; z-index:2">
+    <div @onmouseover="ShowButtons" @onmouseout="HideButtons" class="fullscreen-container" style=" display: block; z-index:2; ">
 
         <img id="zdj1" class="fullscreen-image @(x == 0 ? "visible" : "hidden")"  src="/Images/gora.jpg" alt="Obraz w proporcjach 16:9">
         <img id="zdj2" class="fullscreen-image @(x == 1 ? "visible" : "hidden")"  src="/Images/zdj1.jpg" alt="Obraz w proporcjach 16:9">
         <img id="zdj3" class="fullscreen-image @(x == 2 ? "visible" : "hidden")"  src="/Images/zdj2.jpg" alt="Obraz w proporcjach 16:9">
         <img id="zdj4" class="fullscreen-image @(x == 3 ? "visible" : "hidden")"  src="/Images/zdj3.jpg" alt="Obraz w proporcjach 16:9">
         <img id="zdj5" class="fullscreen-image @(x == 4 ? "visible" : "hidden")"  src="/Images/zdj4.jpg" alt="Obraz w proporcjach 16:9">
-        <img id="zdj6" class="fullscreen-image @(x == 5 ? "visible" : "hidden")"  src="/Images/zdj5.jpg" alt="Obraz w proporcjach 16:9">
+        <img id="zdj6" class="fullscreen-image @(x == 5 ? "visible" : "hidden")"  src="/Images/paper.jpg" alt="Obraz w proporcjach 16:9">
 
     </div>
 
@@ -41,15 +41,15 @@
 <style>
     .fullscreen-container {
     width: 100vh;
-    height: 100vh;
+    height: calc(100vh - 97.6px);
     }
 
     .fullscreen-image {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover; 
+        height: 100%;
+    object-fit: fill; 
     transition: opacity 1s ease-in-out; 
     opacity: 0; 
     position: absolute;

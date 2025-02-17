@@ -3,6 +3,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using RentalSite.Components;
 using RentalSite.Components.Data;
+using Blazorise.Captcha.ReCaptcha;
+using Blazorise;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,4 +32,10 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
+
+
+
+
+
+
 

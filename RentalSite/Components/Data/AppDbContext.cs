@@ -27,10 +27,10 @@ namespace RentalSite.Components.Data
             options.UseSqlServer(Configuration.GetConnectionString("DbConnectionString"));
         }
 
-
         public DbSet<Person> Guests { get; set; }
-
-
+        public DbSet<Reservation> NewReservations { get; set; }
+       
+     
 
 
 

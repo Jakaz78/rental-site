@@ -7,34 +7,140 @@
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
+    @* <nav class="flex-column"> *@
+    @*     <div class="nav-item px-3"> *@
+    @*         <NavLink class="nav-link" href="" Match="NavLinkMatch.All"> *@
+    @*             <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home *@
+    @*         </NavLink> *@
+    @*     </div> *@
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
+    @*     <div class="nav-item px-3"> *@
+    @*         <NavLink class="nav-link" href="counter"> *@
+    @*             <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter *@
+    @*         </NavLink> *@
+    @*     </div> *@
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fun">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Fun
-            </NavLink>
-        </div>
-
-
+    @*     <div class="nav-item px-3"> *@
+    @*         <NavLink class="nav-link" href="weather"> *@
+    @*             <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather *@
+    @*         </NavLink> *@
+    @*     </div> *@
+    @*     <div class="nav-item px-3"> *@
+    @*         <NavLink class="nav-link" href="fun"> *@
+    @*             <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Fun *@
+    @*         </NavLink> *@
+    @*     </div> *@
 
 
 
-    </nav>
+
+
+    @* </nav> *@
+
+
+    @* <nav class="navbar"> *@
+    @*     <div class="navbar-container"> *@
+    @*         <a href="/" class="navbar-logo"> *@
+    @*             <img src="path/to/logo.png" alt="Logo" class="navbar-logo-image" /> *@
+    @*             ATARAXIS *@
+    @*         </a> *@
+    @*         <div class="navbar-links"> *@
+    @*             <a href="/" class="navbar-link">Homepage</a> *@
+    @*             <a href="/technology" class="navbar-link">Technology</a> *@
+    @*             <a href="/ataraxis-breast" class="navbar-link">Ataraxis Breast</a> *@
+    @*             <a href="/news-resources" class="navbar-link">News & Resources</a> *@
+    @*             <a href="/careers" class="navbar-link">Careers</a> *@
+    @*             <a href="/portal" class="navbar-link">Portal</a> *@
+    @*             <a href="/contact-us" class="navbar-link navbar-link-contact"> *@
+    @*                 Contact Us *@
+    @*                 <span class="triangle-icon"></span> *@
+    @*             </a> *@
+    @*         </div> *@
+    @*     </div> *@
+    @* </nav> *@
+
+
+
+
+
+
+
+
+
 </div>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
 
+    .navbar {
+        background-color: #ffffff;
+        border-bottom: 2px solid green;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: green;
+        text-decoration: none;
+    }
+
+    .navbar-logo-image {
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .navbar-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-link {
+        margin-left: 20px;
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        padding: 10px 15px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .navbar-link:hover {
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+        }
+
+    .navbar-link-contact {
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+        .navbar-link-contact .triangle-icon {
+            display: inline-block;
+            margin-left: 10px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid white;
+        }
+
+</style>
