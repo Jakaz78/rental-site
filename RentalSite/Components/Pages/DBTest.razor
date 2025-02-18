@@ -72,14 +72,14 @@
 
 
 
-        <div class="btn-block">
-            <button type="submit" class="button btn btn-primary" style="background:#cc0052">Submit</button>
+        <div class="btn-block" style="">
+            <button type="submit" class="button btn btn-primary" style="background:#fb8500; ">Submit</button>
         </div>
     </EditForm>
 
     @if (saved)
     {
-        <p style="font-size: 100px">Guest added</p>
+        <p style="font-size: 100px">Guest added </p>
     }
     @if (error)
     {
@@ -96,13 +96,25 @@
     private string errorMessage = string.Empty;
     private DateTime LocalReservationFrom = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
     private DateTime LocalReservationTo = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+
+
+    
+
+
     private async Task SubmitForm()
+
     {
         saved = false;
         error = false;
 
         try
         {
+           
+
+            
+
+
            
             dbContext.Guests.Add(newPerson);
             await dbContext.SaveChangesAsync();
@@ -147,7 +159,7 @@
         padding: 20px;
         border-radius: 6px;
         background: #fff;
-        box-shadow: 0 0 10px 0 #cc0052;
+        box-shadow: 0 0 10px 0 #fb8500;
     }
 
     .btn-block {
@@ -160,7 +172,7 @@
         padding: 10px;
         border: none;
         border-radius: 5px;
-        background: #cc0052;
+        background: #fb8500;
         font-size: 16px;
         color: #fff;
         cursor: pointer;
@@ -168,7 +180,7 @@
 
         btn:hover {
             /* background: #ff0066; */
-            background: #ff2211;
+            background: #fb8500;
         }
 
     .form-control {

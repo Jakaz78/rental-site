@@ -20,14 +20,14 @@ namespace RentalSite.Components.Classes
 
         [Required(ErrorMessage = "Name is required")]
         [StringLength(10, MinimumLength = 2, ErrorMessage = "The name must be between 2 and 10 characters")]
-        [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "The name can only contain letters")]
+        [RegularExpression("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$", ErrorMessage = "The name can only contain letters")]
         public string Name { get; set; } = "";
 
 
 
         [Required(ErrorMessage = "Lastname is required")]
         [StringLength(10, MinimumLength = 2, ErrorMessage = "The lastname must be between 2 and 10 characters")]
-        [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "The lastname can only contain letters")]
+        [RegularExpression("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$", ErrorMessage = "The lastname can only contain letters")]
         public string Lastname { get; set; } = "";
 
 

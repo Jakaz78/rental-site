@@ -17,14 +17,14 @@ namespace RentalSite.Components.Classes
 
         [Required(ErrorMessage = "Name is required")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "The name must be between 2 and 50 characters")]
-        [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "The name can only contain letters")]
+        [RegularExpression("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$", ErrorMessage = "The name can only contain letters")]
         
 
         public string Name { get; set; } = "";
 
         [Required(ErrorMessage = "Lastname is required")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "The lastname must be between 2 and 50 characters")]
-        [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "The lastname can only contain letters")]
+        [RegularExpression("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$", ErrorMessage = "The lastname can only contain letters")]
         public string Lastname { get; set; } = "";
 
         [Required(ErrorMessage = "Email is required")]
@@ -37,7 +37,7 @@ namespace RentalSite.Components.Classes
 
         [Required(ErrorMessage = "Phone number is required")]
         [RegularExpression(@"^\d{9}$", ErrorMessage = "The phone number must be exactly 9 digits")]
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; } = "";
 
         public DateTime ReservationDate { get; set; } = DateTime.Now;
         public bool Paid { get; set; } = false;
