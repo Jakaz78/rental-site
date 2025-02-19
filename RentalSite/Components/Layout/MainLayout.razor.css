@@ -68,7 +68,7 @@ main {
         
     }
 
-    .footer-col, .footer-col ul, .footer-col ul li {
+    .footer-col, .footer-col ul, .footer-col ul li, #footer-col-text {
         flex-flow: row;
         padding: 10px 0px 10px 0px;
         width: 80vw;
