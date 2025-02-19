@@ -1,8 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Text.RegularExpressions;
-using System.Text;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RentalSite.Components.Classes
@@ -57,11 +53,11 @@ namespace RentalSite.Components.Classes
 
 
 
-        
-       
+
+
     }
 
-   
+
 
     public enum EnumSex { men = 1, woman = 2, blad = 0 }
 

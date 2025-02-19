@@ -11,7 +11,7 @@ namespace RentalSite.Components.Data
         public AppDbContext(IConfiguration configuration)
         {
 
-            Configuration= configuration;
+            Configuration = configuration;
         }
 
 
@@ -29,8 +29,8 @@ namespace RentalSite.Components.Data
 
         public DbSet<Person> Guests { get; set; }
         public DbSet<Reservation> NewReservations { get; set; }
-       
-     
+
+
 
 
 

@@ -3,13 +3,12 @@
 @rendermode InteractiveServer
 
 @inject Data.AppDbContext dbContext
+@using Microsoft.AspNetCore.Components.Web
 
+<PageTitle>DbTest</PageTitle>
 
-
-<PageTitle>DBTest</PageTitle>
-
-<body id="bodyy">
-    <EditForm Model="@newPerson" OnValidSubmit="SubmitForm" id="EditForm">
+<body id="bodyy" style="width: 100%; height: 100%;">
+    <EditForm Model="@newPerson" OnValidSubmit="SubmitForm" id="EditForm" style="margin-top:10px;">
         <DataAnnotationsValidator />
 
         <div class="form-group">
@@ -152,7 +151,8 @@
 
 <style>
     #bodyy{
-        height:calc(100vh - 97.6px)
+        height: calc(100vh - 85px);
+        max-width: 100vw;
     }
     #EditForm{
         width: 100%;

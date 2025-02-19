@@ -5,11 +5,11 @@ namespace RentalSite.Components.Classes
 {
     public class Reservation
     {
-        
-       
+
+
 
         [Key]
-    public int ReservationID { get; set; }
+        public int ReservationID { get; set; }
 
         [ForeignKey("Guests")]
         public int GuestID { get; set; }
@@ -18,7 +18,7 @@ namespace RentalSite.Components.Classes
         [Required(ErrorMessage = "Name is required")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "The name must be between 2 and 50 characters")]
         [RegularExpression("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$", ErrorMessage = "The name can only contain letters")]
-        
+
 
         public string Name { get; set; } = "";
 
@@ -43,9 +43,9 @@ namespace RentalSite.Components.Classes
         public bool Paid { get; set; } = false;
 
 
-        public DateTime ReservationFrom { get; set; } 
+        public DateTime ReservationFrom { get; set; }
 
-        public DateTime ReservationTo { get; set; } 
+        public DateTime ReservationTo { get; set; }
 
 
 

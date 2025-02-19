@@ -2,7 +2,7 @@
 
 @rendermode InteractiveServer
 
-<body class="gallery-page">
+<body class="gallery-page" style="max-width:100vw">
 
     <div style=" transition: opacity 0.9s ease-in-out; width: 100%; position:absolute; display:flex;  justify-content:space-between;  left:0px; top:50%">
 
@@ -41,7 +41,8 @@
 <style>
 
     .gallery-page{
-        height:100vh;
+        height: calc(100vh - 85px);
+        max-width: 100vw;
     }
 
 
@@ -50,19 +51,26 @@
 
 
     .fullscreen-container {
-    width: 100vw;
-    height: 100vh;
+        max-width: 100vw;
+    width: 100px;
+    height:100px;
+    max-height:100vh;
+        
+        height: calc(100vh - 85px);
     }
 
     .fullscreen-image {
-    top: 0;
+        max-width: 100vw;
+    top: 0px;
     left: 0;
     width: 100%;
-    height: 100vh;
+        height: calc(100vh - 80px);
     object-fit: fill; 
     transition: opacity 1s ease-in-out; 
     opacity: 0; 
     position: absolute;
+    max-width: 100vw;
+        margin-top: 80px;
     }
 
     
