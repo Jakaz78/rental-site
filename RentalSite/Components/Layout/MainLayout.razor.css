@@ -1,10 +1,9 @@
 html {
-    background: linear-gradient(to bottom,  #fb8500 100%);
-    background: linear-gradient(to top,  #24262b 100%);
+  
     overflow-x: hidden;
     background-color: #fb8500;
 }
-}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif,Arial;

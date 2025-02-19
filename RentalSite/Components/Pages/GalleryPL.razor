@@ -6,16 +6,16 @@
 
     <div style=" transition: opacity 0.9s ease-in-out; width: 100%; position:absolute; display:flex;  justify-content:space-between;  left:0px; top:50%">
 
-        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:2; background-color:transparent;     position:relative; height:5vw; width:5vw; left:100px; ">
+        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:2; background-color:transparent;     position:relative; height:10vw; width:10vw; left:100px; ">
 
-            <button @onmouseover="ShowButtons" @onmouseout="HideButtons" class="@(showButtons ? "visible" : "hidden")" id="button-left" @onclick="Increment" style=" transition: opacity 0.3s ease-in-out;background-color:transparent; backdrop-filter:@(showButtons ? "blur(10px)" : "none"); object-fit: contain; width: 100%; height: 100%; background-image: url('/Images/arrow-left.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <button id="button-left" @onclick="Decrement" style=" transition: opacity 0.3s ease-in-out;background-color:transparent; backdrop-filter:blur(10px); object-fit: contain; width: 100%; height: 100%; background-image: url('/Images/arrow-left.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
             </button>
 
         </div>
 
-        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:2; background-color:transparent;   position:relative; height:5vw; width:5vw; right:100px; ">
+        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:2; background-color:transparent;   position:relative; height:10vw; width:10vw; right:100px; ">
 
-            <button @onmouseover="ShowButtons" @onmouseout="HideButtons" class="@(showButtons ? "visible" : "hidden")" id="button-right" @onclick="Decrement" style="transition: opacity 0.5s ease-in-out; background-color:transparent; backdrop-filter:@(showButtons ? "blur(10px)" : "none"); object-fit: contain; width: 100%; height: 100%; background-image: url('/Images/arrow-right.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <button id="button-right" @onclick="Increment" style="transition: opacity 0.5s ease-in-out; background-color:transparent; backdrop-filter:blur(10px); object-fit: contain; width: 100%; height: 100%; background-image: url('/Images/arrow-right.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
             </button>
 
         </div>
