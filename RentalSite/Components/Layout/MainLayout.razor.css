@@ -1,7 +1,7 @@
 html {
-  
     overflow-x: hidden;
     background-color: #fb8500;
+    background: #fb8500;
 }
 
 body {
@@ -12,6 +12,8 @@ body {
     background: linear-gradient(to top, transparent 0%, #24262b 100%);
     overflow-x: hidden;
     background-color: #fb8500;
+    background: #fb8500;
+    -webkit-animation: fadein 1.5s;
 }
 html, body {
     margin: 0;
@@ -28,7 +30,7 @@ html, body {
         height: 50vh; /* Mo¿esz dostosowaæ */
         background-color: #fb8500;
         position: fixed;
-        bottom: -15vh; /* Poza ekranem, aby p³ynnie zakrywa³o */
+        bottom: -5vh; /* Poza ekranem, aby p³ynnie zakrywa³o */
         left: 0;
         z-index: -1;
     }
@@ -39,7 +41,7 @@ html, body {
         height: 30vh; /* Wysokoœæ górnego obszaru */
         background-color: #24262b; /* Kolor u góry */
         position: fixed;
-        top: -15vh; /* Zapewnia, ¿e kolor siêga powy¿ej ekranu */
+        top: -5vh; /* Zapewnia, ¿e kolor siêga powy¿ej ekranu */
         left: 0;
         z-index: -1;
     }
