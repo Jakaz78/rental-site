@@ -1,6 +1,6 @@
 html {
-    background: linear-gradient(to bottom, transparent 0%, #fb8500 100%);
-    background: linear-gradient(to top, transparent 0%, #24262b 100%);
+    background: linear-gradient(to bottom,  #fb8500 100%);
+    background: linear-gradient(to top,  #24262b 100%);
     overflow-x: hidden;
     background-color: #fb8500;
 }
@@ -29,7 +29,7 @@ html, body {
         height: 50vh; /* Mo¿esz dostosowaæ */
         background-color: #fb8500;
         position: fixed;
-        bottom: -25vh; /* Poza ekranem, aby p³ynnie zakrywa³o */
+        bottom: -15vh; /* Poza ekranem, aby p³ynnie zakrywa³o */
         left: 0;
         z-index: -1;
     }
