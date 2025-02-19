@@ -1,8 +1,14 @@
-
+html {
+    background: linear-gradient(to bottom, transparent 0%, #fb8500 100%);
+    background: linear-gradient(to top, transparent 0%, #24262b 100%);
+}
+}
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif,Arial;
     line-height: 1.5;
+    background: linear-gradient(to bottom, transparent 0%, #fb8500 100%);
+    background: linear-gradient(to top, transparent 0%, #24262b 100%);
 }
 
 .page {
@@ -194,6 +200,7 @@ ul {
 .footer {
     background-color: #24262b;
     padding: 70px 0;
+
 }
 
 .footer-col {
