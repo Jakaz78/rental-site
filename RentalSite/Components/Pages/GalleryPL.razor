@@ -6,14 +6,14 @@
 
     <div style=" transition: opacity 0.9s ease-in-out; width: 100%; position:absolute; display:flex;  justify-content:space-between;  left:0px; top:50%">
 
-        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:1; background-color:transparent;     position:relative; height:5vw; width:5vw; left:100px; ">
+        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:2; background-color:transparent;     position:relative; height:5vw; width:5vw; left:100px; ">
 
             <button @onmouseover="ShowButtons" @onmouseout="HideButtons" class="@(showButtons ? "visible" : "hidden")" id="button-left" @onclick="Increment" style=" transition: opacity 0.3s ease-in-out;background-color:transparent; backdrop-filter:@(showButtons ? "blur(10px)" : "none"); object-fit: contain; width: 100%; height: 100%; background-image: url('/Images/arrow-left-solid.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
             </button>
 
         </div>
 
-        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:1; background-color:transparent;   position:relative; height:5vw; width:5vw; right:100px; ">
+        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:2; background-color:transparent;   position:relative; height:5vw; width:5vw; right:100px; ">
 
             <button @onmouseover="ShowButtons" @onmouseout="HideButtons" class="@(showButtons ? "visible" : "hidden")" id="button-right" @onclick="Decrement" style="transition: opacity 0.5s ease-in-out; background-color:transparent; backdrop-filter:@(showButtons ? "blur(10px)" : "none"); object-fit: contain; width: 100%; height: 100%; background-image: url('/Images/arrow-right-solid.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
 
@@ -39,16 +39,26 @@
 </body>
 
 <style>
+
+    .gallery-page{
+        height:100vh;
+    }
+
+
+
+
+
+
     .fullscreen-container {
-    width: 100vh;
-    height: calc(100vh - 97.6px);
+    width: 100vw;
+    height: 100vh;
     }
 
     .fullscreen-image {
     top: 0;
     left: 0;
     width: 100%;
-        height: 100%;
+    height: 100vh;
     object-fit: fill; 
     transition: opacity 1s ease-in-out; 
     opacity: 0; 

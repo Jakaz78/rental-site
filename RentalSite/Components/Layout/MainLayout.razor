@@ -1,21 +1,23 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    @* <div class="sidebar"> *@
-    @*     <NavMenu /> *@
-    @* </div> *@
-
+    
     <main>
-        <div class="top-row " style="background-color: #24262b; backdrop-filter:blur(10px); height:80px;  display: flex; justify-content: space-between; margin-left:-25px; margin-left:-70px!important; border-bottom:5px solid orange">
 
-            <div class="nav-item" >
-            <a style="" href="\ "><img class="small-logo" style="object-fit: contain; " src="Images/pies.jpg" /></a>
-                <a style="object-fit: cover;" href="\ "><img class="big-logo" style="object-fit: contain; margin-bottom:5px" src="Images/test1.svg" /></a>
+        <div class="top-row">
+
+            <div class="nav-item">
+
+                <a href="\ "> <img id="small-logo" src="Images/pies.jpg" /> </a>
+                <a href="\ "> <img id="big-logo" src="Images/test1.svg" /> </a>
+
             </div>
 
-            <div class="nav-item" style="text-decoration: none;">
-                <a href="\DBTest" class="nav-button" style="text-decoration: none;">Wynajem</a>
-                <a href="\galleryPL" class="nav-button"style="text-decoration: none;">Galeria</a>
+
+            <div class="nav-item">
+
+                <a href="\DBTest" class="nav-button" style="text-decoration: none;"> Wynajem</a>
+                <a href="\galleryPL" class="nav-button" style="text-decoration: none;"> Galeria</a>
                 
             </div>
             
@@ -24,69 +26,93 @@
         
 
 
-        <article class="content">
+        <article class="content" style="min-height:100vh" >
+
             @Body
          
         </article>
 
-        
-        
-
     </main>
-    
-    
-    
 
 </div>
 
+
+
 <footer class="footer">
-    <div class="containerr">
+
+
+    <div class="footer-container">
+
+
         <div class="row">
 
-            <div class="footer-col">
-                <h4>company</h4>
-                <a style="object-fit: cover;" href="\ "><img class="big-logo" style="object-fit: cover; background-color:#24262b" src="Images/tet.svg" /></a>
+
+            <div id="footer-logo" class="footer-col">
+
+                <h4>Spółka</h4>
+
+                <a href="\ "><img class="big-logo" style="width:100%;" src="Images/tet.svg" /></a>
+
             </div>
+
+
             <div class="footer-col">
+
                 <h4>Skontaktuj się z nami!</h4>
+
                 <ul>
+
                     <li><a href="">📞 +48 123 456 789</a></li>
                     <li><a href="mailto:sloneczny.zakatek.busko@gmail.com">sloneczny.zakatek.busko@gmail.com</a></li>
                     <li><a href="mailto:78Developments@gmail.com">78Developments@gmail.com</a></li>
-                    <li><a href="#">dress</a></li>
+                   
+
                 </ul>
+
             </div>
+
+
             <div class="footer-col">
-                <h4>get help</h4>
+
+                <h4>Regulaminy</h4>
+
                 <ul>
+
                     <li><a href="\TermsOfUsePL">Warunki</a></li>
                     <li><a href="\PrivacyPolicyPL">Polityka prywatności</a></li>
                     <li><a href="\CookiesPL">Pliki Cookies</a></li>
                     
                 </ul>
+
             </div>
             
+
             <div class="footer-col">
-                <h4>follow us</h4>
+
+                <h4>Znajdź nas</h4>
+
                 <div class="social-links">
+
                     <a href="https://www.facebook.com/profile.php?id=61560715480934" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><img src="Images/booking.png" alt="Booking" class="fab booking-logo social-icon" /></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
+
                 </div>
+
 
             </div>
 
+
         </div>
+
 
     </div>
    
 </footer>
-<footer style="
-    bottom: 0px;
-    background-color: #fb8500;
-    width: 100%;
-    text-align: center;">
+
+<footer id="rights">
+
     <strong>&copy; All rights reserved 78Developments 2025</strong>
     
 </footer>
@@ -101,169 +127,5 @@
 </div>
 
 
-
-
-<style>
-    
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        
-    }
-
-    .nav-item {
-        display: flex;
-        gap: 10px; /* Dodajmy trochę odstępu między przyciskami */
-    }
-
-    .nav-button {
-        padding: 15px 25px;
-        border: 3px solid #fb8500;
-        border-radius: 50px;
-        background: #24262b ;
-        color: #fb8500;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.2s ease-out;
-    }
-
-        .nav-button:hover {
-            background: #3d404a;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-            font-size:20px;
-            text-decoration: none;
-        }
-
-        .nav-button:active {
-            transform: translateY(0);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-decoration: none;
-        }
-    body {
-        line-height: 1.5;
-        font-family: 'Poppins', sans-serif;
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .containerr {
-        max-width: 1170px;
-        margin: auto;
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    .footer {
-        background-color: #24262b;
-        padding: 70px 0;
-    }
-
-    .footer-col {
-        width: 25%;
-        padding: 0 15px;
-    }
-
-        .footer-col h4 {
-            font-size: 18px;
-            color: #ffffff;
-            /* text-transform: capitalize; */
-            margin-bottom: 35px;
-            font-weight: 500;
-            position: relative;
-        }
-
-            .footer-col h4::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -10px;
-                background-color: #fb8500;
-                height: 2px;
-                box-sizing: border-box;
-                width: 50px;
-            }
-
-        .footer-col ul li:not(:last-child) {
-            margin-bottom: 10px;
-        }
-
-        .footer-col ul li a {
-            font-size: 16px;
-            /* text-transform: capitalize; */
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 300;
-            color: #bbbbbb;
-            display: block;
-            transition: all 0.3s ease;
-        }
-
-            .footer-col ul li a:hover {
-                color: #ffffff;
-                padding-left: 8px;
-            }
-
-        .footer-col .social-links a {
-            display: inline-block;
-            height: 40px;
-            width: 40px;
-            background-color: rgba(255,255,255,0.2);
-            margin: 0 10px 10px 0;
-            text-align: center;
-            line-height: 40px;
-            border-radius: 50%;
-            color: #ffffff;
-            transition: all 0.5s ease;
-        }
-
-            .footer-col .social-links a:hover {
-                color: #24262b;
-                background-color: #ffffff;
-            }
-
-        .footer-col .social-links a {
-            display: inline-block;
-            height: 40px;
-            width: 40px;
-            background-color: rgba(255, 255, 255, 0.2);
-            margin: 0 10px 10px 0;
-            text-align: center;
-            line-height: 40px;
-            border-radius: 50%;
-            color: #ffffff;
-            transition: all 0.5s ease;
-        }
-
-            .footer-col .social-links a:hover {
-                color: #24262b;
-                background-color: #ffffff;
-            }
-
-    .social-icon {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-       
-        padding-bottom: 5px; /* Można dostosować padding, aby dopasować logo */
-    }
-
-   
-    
-</style>
 
 
