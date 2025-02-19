@@ -14,7 +14,13 @@ body {
     overflow-x: hidden;
     background-color: #fb8500;
 }
-
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Gwarantuje, ¿e strona ma min. wysokoœæ ekranu */
+    background-color: #fb8500; /* Kolor g³ównej czêœci */
+    position: relative;
+}
 
     html::after {
         content: "";

@@ -1,10 +1,11 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page" style="min-height:100vh; max-width: 100vw;">
-    
-    <main style=" max-width: 100vw; padding-left:-32px">
+    <div style="background-color:#24262b; z-index:-100; height:100vh; width:100%; position:absolute; top:-50vh"></div>
+    <div style="background-color: #fb8500; z-index:-100; height:100vh; width:100%; position:absolute;"></div>
+    <main style=" max-width: 100vw; padding-left:-32px; z-index:1; background-color:white">
 
-        <div class="top-row" style="">
+        <div class="top-row" style="z-index:1">
 
             <div class="nav-item" >
 
@@ -26,7 +27,7 @@
         
 
 
-        <article class="content" style=" max-width: 100vw; padding:10px 10px -5px 10px ">
+        <article class="content" style=" max-width: 100vw; padding:10px 10px -5px 10px;z-index:10 ">
 
             @Body
          
@@ -38,7 +39,7 @@
 
 
 
-<footer class="footer">
+<footer class="footer" style="z-index:100;">
 
 
     <div class="footer-container">
