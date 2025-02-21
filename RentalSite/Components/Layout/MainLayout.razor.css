@@ -239,6 +239,8 @@ ul {
 .footer {
     background-color: #24262b;
     padding: 70px 0;
+    position:sticky;
+    bottom:0;
 
 }
 

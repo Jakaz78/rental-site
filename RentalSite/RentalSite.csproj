@@ -9,6 +9,9 @@
 
 	<ItemGroup>
 	  <Content Remove="Components\Pages\Counter.razor" />
+	  <Content Remove="wwwroot\Images\zdj1.jpg" />
+	  <Content Remove="wwwroot\Images\zdj3.jpg" />
+	  <Content Remove="wwwroot\Images\zdj6.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -19,7 +22,6 @@
 	  <None Include="wwwroot\Images\bitmapa.jpg" />
 	  <None Include="wwwroot\Images\bitmapa.png" />
 	  <None Include="wwwroot\Images\logo1.svg" />
-	  <None Include="wwwroot\Images\tlo1.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
