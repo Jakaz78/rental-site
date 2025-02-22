@@ -6,8 +6,7 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif,Arial;
-    line-height: 1.5;
+    font-family: 'Inter', sans-serif,Arial;
     background: linear-gradient(to bottom, transparent 0%, #fb8500 100%);
     background: linear-gradient(to top, transparent 0%, #24262b 100%);
     overflow-x: hidden;
@@ -88,9 +87,10 @@ main {
     background-color: #24262b;
 }
 
-@media (max-width: 640.98px) {
+@media (max-width: 1000.98px) {
     .top-row {
         justify-content: space-between;
+        
     }
 
     .top-row ::deep a, .top-row ::deep .btn-link {
@@ -98,6 +98,7 @@ main {
     }
     #small-logo {
         height: 80px;
+        width:20vw;
         object-fit: contain;
         display: block;
         margin-left:80px;
@@ -107,7 +108,15 @@ main {
         margin-top:-100px
         
     }
-
+    .nav-button {
+        width: 100%;
+       
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .nav-button-container {
+        width:100%;
+    }
     .footer-col, .footer-col ul, .footer-col ul li, #footer-col-text {
         flex-flow: row;
         padding: 10px 0px 10px 0px;
@@ -130,7 +139,7 @@ main {
 
 }
 
-@media (min-width: 641px) {
+@media (min-width: 1001px) {
     .page {
         flex-direction: row;
     }
@@ -166,7 +175,7 @@ main {
 
 .nav-item {
     display: flex;
-    gap: 10px;
+    gap: 1vw;
     align-items: center;
     justify-content: start;
     text-decoration: none;
@@ -174,7 +183,7 @@ main {
 }
 
 .nav-button {
-    padding: 15px 25px;
+    padding: 15px 25px 15px 25px;
     border: 3px solid #fb8500;
     border-radius: 50px;
     background: #24262b;
@@ -333,3 +342,18 @@ ul {
         right: 0.75rem;
         top: 0.5rem;
     }
+.animate {
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+@keyframes animate-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

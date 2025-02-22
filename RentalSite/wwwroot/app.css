@@ -1,14 +1,15 @@
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    
-   
-
+    font-family: 'Inter','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a, .btn-link {
     color: #006bb7;
 }
+.listOf li::marker {
+    color: #fb8500;
+}
 
+}
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;

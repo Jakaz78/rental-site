@@ -2,20 +2,20 @@
 
 @rendermode InteractiveServer
 
-<body class="gallery-page" style="max-width:100vw">
+<body class="gallery-page">
 
-    <div style=" transition: opacity 0.9s ease-in-out; width: 100%; position:absolute; display:flex;  justify-content:space-between;  left:0px; top:50%">
+    <div class="gallery-container">
 
-        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:2; background-color:transparent;     position:relative; height:10vw; width:10vw; left:5vh; ">
+        <div id="ImgButton" style="left:5vh; ">
 
-            <button id="button-left" @onclick="Decrement" style=" transition: opacity 0.3s ease-in-out;background-color:transparent; backdrop-filter:blur(10px); object-fit: contain; width: 100%; height: 100%; background-image: url('/Images/arrow-left.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <button id="button-left" class="next-button" @onclick="Decrement" style="background-image: url('/Images/arrow-left.svg'); ">
             </button>
 
         </div>
 
-        <div id="NextImgButton" style="transition: opacity 0.3s ease-in-out; z-index:2; background-color:transparent;   position:relative; height:10vw; width:10vw; right:5vh; ">
+        <div id="ImgButton" style="right:5vh;">
 
-            <button id="button-right" @onclick="Increment" style="transition: opacity 0.5s ease-in-out; background-color:transparent; backdrop-filter:blur(10px); object-fit: contain; width: 100%; height: 100%; background-image: url('/Images/arrow-right.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <button id="button-right" class="next-button" @onclick=" Increment" style="background-image: url('/Images/arrow-right.svg'); ">
             </button>
 
         </div>
@@ -24,12 +24,12 @@
 
     <div @onmouseover="ShowButtons" @onmouseout="HideButtons" class="fullscreen-container" style=" display: block; z-index:2; ">
 
-        <img id="zdj1" class="fullscreen-image @(x == 0 ? "visible" : "hidden")"  src="/Images/gora.jpg" alt="Obraz w proporcjach 16:9">
-        <img id="zdj2" class="fullscreen-image @(x == 1 ? "visible" : "hidden")"  src="/Images/zdj1.jpg" alt="Obraz w proporcjach 16:9">
-        <img id="zdj3" class="fullscreen-image @(x == 2 ? "visible" : "hidden")"  src="/Images/zdj3.jpg" alt="Obraz w proporcjach 16:9">
-        <img id="zdj4" class="fullscreen-image @(x == 3 ? "visible" : "hidden")"  src="/Images/zdj3.jpg" alt="Obraz w proporcjach 16:9">
+        <img id="zdj0" class="fullscreen-image @(x == 0 ? "visible" : "hidden")" src="/Images/zdj0.jpg" alt="Obraz w proporcjach 16:9">
+        <img id="zdj1" class="fullscreen-image @(x == 1 ? "visible" : "hidden")"  src="/Images/zdj1.jpg" alt="Obraz w proporcjach 16:9">
+        <img id="zdj2" class="fullscreen-image @(x == 2 ? "visible" : "hidden")"  src="/Images/zdj2.jpg" alt="Obraz w proporcjach 16:9">
+        <img id="zdj3" class="fullscreen-image @(x == 3 ? "visible" : "hidden")"  src="/Images/zdj3.jpg" alt="Obraz w proporcjach 16:9">
         <img id="zdj5" class="fullscreen-image @(x == 4 ? "visible" : "hidden")"  src="/Images/zdj4.jpg" alt="Obraz w proporcjach 16:9">
-        <img id="zdj6" class="fullscreen-image @(x == 5 ? "visible" : "hidden")"  src="/Images/paper.jpg" alt="Obraz w proporcjach 16:9">
+      
 
     </div>
 
@@ -44,9 +44,26 @@
         max-width: 100vw;
     }
 
+    .gallery-container{
+        transition: opacity 0.9s ease-in-out;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        left: 0px;
+        top: 50%
+    }
 
-
-
+    .next-button{
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 
 
     .fullscreen-container {
@@ -74,10 +91,15 @@
 
     
 
-            #NextImgButton{
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
-            }
+            #ImgButton{
+        z-index: 2;
+        background-color: transparent;
+        position: relative;
+        height: 10vw;
+        width: 10vw;
+    }
+
+
 
     .visible {
     opacity: 1; 
@@ -100,7 +122,7 @@
     {
         y = 1;
         x++;
-        if (x > 5) { x = 0; }
+        if (x > 3) { x = 0; }
         timer.Stop();
         timer.Start();
     }
@@ -108,7 +130,7 @@
     {
         y = 1;
         x--;
-        if (x < 0) { x = 5; }
+        if (x < 0) { x = 3; }
         timer.Stop();
         timer.Start();
     }
@@ -123,7 +145,7 @@
         {
             y = 0;
             x++;
-            if (x > 5) { x = 0; }
+            if (x > 3) { x = 0; }
             
             InvokeAsync(StateHasChanged);
         };

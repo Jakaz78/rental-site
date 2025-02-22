@@ -1,30 +1,30 @@
-﻿@page "/DBTest"
+﻿@page "/Reservations"
 
 @rendermode InteractiveServer
 
 @inject Data.AppDbContext dbContext
 @using Microsoft.AspNetCore.Components.Web
 
-<PageTitle>DbTest</PageTitle>
+<PageTitle>Reservations</PageTitle>
 
 <body id="bodyy" style="width: 100%; height: 100%;">
     <EditForm Model="@newPerson" OnValidSubmit="SubmitForm" id="EditForm" style="margin-top:10px;">
         <DataAnnotationsValidator />
 
         <div class="form-group">
-            <label for="fname">First name:</label><br>
+            <label for="fname">Imię:</label><br>
             <InputText id="fname" @bind-Value="newPerson.Name" class="form-control" />
             <ValidationMessage For="@(() => newPerson.Name)" />
         </div>
 
         <div class="form-group">
-            <label for="lname">Last name:</label><br>
+            <label for="lname">Nazwisko:</label><br>
             <InputText id="lname" @bind-Value="newPerson.Lastname" class="form-control" />
             <ValidationMessage For="@(() => newPerson.Lastname)" />
         </div>
 
         <div class="form-group">
-            <label for="PhoneNumberPrefix">Phone number Prefix:</label><br>
+            <label for="PhoneNumberPrefix">Numer kierunkowy:</label><br>
             <InputSelect id="PhoneNumberPrefix" @bind-Value="newPerson.PhoneNumberPrefix" class="form-control">
                 <option value="+1">+1 (USA)</option>
                 <option value="+44">+44 (UK)</option>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="form-group">
-            <label for="PhoneNumber">Phone number:</label><br>
+            <label for="PhoneNumber">Numer telefonu:</label><br>
 
             <input type="text" id="PhoneNumber" @bind="newPerson.PhoneNumber" maxlength="9" class="form-control" />
 
@@ -54,14 +54,14 @@
 
 
         <div class="form-group">
-            <label for=" ReservationFrom ">ReservationFrom:</label><br>
+            <label for=" ReservationFrom ">Rezerwacja od:</label><br>
             <InputDate id="ReservationFrom" @bind-Value="LocalReservationFrom" class="form-control"></InputDate>
 
         </div>
 
 
         <div class="form-group">
-            <label for=" ReservationFrom ">ReservationFrom:</label><br>
+            <label for=" ReservationFrom ">Rezerwacja do:</label><br>
             <InputDate id="ReservationFrom" @bind-Value="LocalReservationTo" class="form-control"></InputDate>
 
         </div>
@@ -72,18 +72,18 @@
 
 
         <div class="btn-block" style="">
-            <button type="submit" class="button btn btn-primary" style="background:#fb8500; ">Submit</button>
+            <button type="submit" class="button btn btn-primary" style="background:#fb8500; ">Wyślij</button>
         </div>
     </EditForm>
 
     @if (saved)
     {
-        <p style="font-size: 100px">Guest added </p>
+        <p style="font-size: 100px">Rezerwacja dodana do bazy danych </p>
     }
     @if (error)
     {
         <div style="font-size: 18px; color: red; border: 1px solid red; padding: 10px; border-radius: 5px;">
-            Something went wrong: @errorMessage
+            Nie udało się dodać rezerwacji do bazy danych. Spróboj ponownie później @errorMessage.
         </div>
     }
 </body>

@@ -10,27 +10,26 @@ namespace RentalSite.Components.Classes
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int GuestID { get; set; } // Klucz główny    
+        public int GuestID { get; set; } 
 
 
-
-        [Required(ErrorMessage = "Name is required")]
-        [StringLength(10, MinimumLength = 2, ErrorMessage = "The name must be between 2 and 10 characters")]
-        [RegularExpression("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$", ErrorMessage = "The name can only contain letters")]
+        [Required(ErrorMessage = "Imię jest wymagane")]
+        [StringLength(20, MinimumLength = 2, ErrorMessage = "Imię musi zawierać od 2 do 20 liter")]
+        [RegularExpression("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$", ErrorMessage = "Imię może zawierać tylko litery")]
         public string Name { get; set; } = "";
 
 
 
-        [Required(ErrorMessage = "Lastname is required")]
-        [StringLength(10, MinimumLength = 2, ErrorMessage = "The lastname must be between 2 and 10 characters")]
-        [RegularExpression("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$", ErrorMessage = "The lastname can only contain letters")]
+        [Required(ErrorMessage = "Nazwisko jest wymagane")]
+        [StringLength(10, MinimumLength = 2, ErrorMessage = "Nazwisko musi zawierać od 2 do 20 liter")]
+        [RegularExpression("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$", ErrorMessage = "Nazwisko może zawierać tylko litery")]
         public string Lastname { get; set; } = "";
 
 
 
-        [Required(ErrorMessage = "Email is required")]
-        [StringLength(100, MinimumLength = 1, ErrorMessage = "The email must be between 1 and 100 characters")]
-        [RegularExpression("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid email pattern")]
+        [Required(ErrorMessage = "Email jest wymagany")]
+        [StringLength(100, MinimumLength = 1, ErrorMessage = "Email musi zawierać od 2 do 100 znaków")]
+        [RegularExpression("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", ErrorMessage = "Nieprawidłowy format email")]
         public string Email { get; set; } = "";
 
 
@@ -39,8 +38,8 @@ namespace RentalSite.Components.Classes
 
 
 
-        [Required(ErrorMessage = "Phone number is required")]
-        [RegularExpression(@"^\d{9}$", ErrorMessage = "The phone number must be exactly 9 digits")]
+        [Required(ErrorMessage = "Numer telefonu jest wymagany")]
+        [RegularExpression(@"^\d{9}$", ErrorMessage = "Numer telefonu musi zawierać dokładnie 9 cyfr")]
         public string PhoneNumber { get; set; } = "";
 
 
