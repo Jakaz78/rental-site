@@ -9,13 +9,7 @@
 
 	<ItemGroup>
 	  <Content Remove="Components\Pages\Counter.razor" />
-	  <Content Remove="wwwroot\Images\zdj1.jpg" />
-	  <Content Remove="wwwroot\Images\zdj3.jpg" />
 	  <Content Remove="wwwroot\Images\zdj6.jpg" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="wwwroot\Images\" />
 	</ItemGroup>
 
 	<ItemGroup>
