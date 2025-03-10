@@ -1,6 +1,10 @@
 <h1>Rental Site</h1>
 RentalSite is a web platform designed for booking an apartment in the town of Busko-Zdrój. Built using Blazor technology, the site provides a seamless experience for viewing property details, exploring a photo gallery, and making reservations through an integrated database system.
 
+Whole site is hosted on Azure. Link:
+https://rentalsite.azurewebsites.net
+
+
 <h2> Key Features </h2>
 
 <h4> 🏠 Home Page </h4>
